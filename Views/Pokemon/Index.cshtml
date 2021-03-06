@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ApiTesting.Models.Pokemon>
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<hr />
+
+@ViewBag.Test
+
+<hr />
+
+@ViewBag.ApiResponse
+
+<hr />
+
+<table class="table table-sm table-striped table-bordered m-2">
+    <thead>
+        <tr>
+            <th>URL</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.url</td>
+                <td>@p.name</td>
+            </tr>
+        }
+    </tbody>
+</table>
